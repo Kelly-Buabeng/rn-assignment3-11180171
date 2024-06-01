@@ -10,7 +10,7 @@ export default function App() {
         <View style={styles.headerContainer}>
           <View>
             <Text style={styles.title}>Hello, Devs</Text>
-            <Text>Tasks today</Text>
+            <Text>20 Tasks today</Text>
           </View>
           <View>
             <Image 
