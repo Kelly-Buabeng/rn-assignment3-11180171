@@ -20,13 +20,7 @@ export function CategoriesOfTasks() {
         ]}
         horizontal renderItem={({ item }) => (
           <View style={styles.card}>
-            <View style={{
-              width: 35,
-              height: 2,
-              borderRadius: 10,
-              marginBottom: 4,
-              backgroundColor: '#F9ECEE',
-            }} />
+            
             <Text style={styles.categoryTitle}>{item.title}</Text>
 
 

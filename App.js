@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView, Image, StyleSheet, Text, View, StatusBar, FlatList, ScrollView } from 'react-native';
 import { SearchFilter } from './components/search-filter';
 import { CategoriesOfTasks } from './components/categoriesioftasks';
+import { OngoingActivities } from './components/ongoingactivities';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         
         <SearchFilter />
         <CategoriesOfTasks />
+        <OngoingActivities />
       </ScrollView>
     </SafeAreaView>
   );
