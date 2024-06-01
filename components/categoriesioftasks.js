@@ -6,17 +6,17 @@ export function CategoriesOfTasks() {
       <Text style={styles.categoryMainTitle}>Categories </Text>
       <FlatList
         data={[
-          { id: '9', title: 'Study', image: require('../assets/images/study.png')},
-          { id: '1', title: 'Socialize',image: require('../assets/images/socialize.png') },
-          { id: '2', title: 'Personal', image: require('../assets/images/volunteering.png')},
-          { id: '3', title: 'Cleaning', image: require('../assets/images/cleaning.png')},
-          { id: '4', title: 'Lectures', image: require('../assets/images/lectures.png')},
-          { id: '5', title: 'Appointments', image: require('../assets/images/appointments.png')},
-          { id: '6', title: 'Work', image: require('../assets/images/work.png')},
-          { id: '7', title: 'Gym and Cardio', image: require('../assets/images/exercise.png')},
-          { id: '8', title: 'Cook', image: require('../assets/images/cook.png')},
+          { id: 9, title: 'Study', image: require('../assets/images/study.png')},
+          { id: 1, title: 'Socialize',image: require('../assets/images/socialize.png') },
+          { id: 2, title: 'Personal', image: require('../assets/images/volunteering.png')},
+          { id: 3, title: 'Cleaning', image: require('../assets/images/cleaning.png')},
+          { id: 4, title: 'Lectures', image: require('../assets/images/lectures.png')},
+          { id: 5, title: 'Appointments', image: require('../assets/images/appointments.png')},
+          { id: 6, title: 'Work', image: require('../assets/images/work.png')},
+          { id: 7, title: 'Gym and Cardio', image: require('../assets/images/exercise.png')},
+          { id: 8, title: 'Cook', image: require('../assets/images/cook.png')},
           
-          { id: '10', title: 'Coding', image: require('../assets/images/coding.png')},
+          { id: 10, title: 'Coding', image: require('../assets/images/coding.png')},
         ]}
         horizontal renderItem={({ item }) => (
           <View style={styles.card}>
@@ -30,7 +30,7 @@ export function CategoriesOfTasks() {
             <Text style={styles.categoryTitle}>{item.title}</Text>
 
 
-            
+            <Text style={styles.categorySubtitle}>{item.id > 1 ? `${item.id} Tasks` : `${item.id} Task`}</Text>
 
 
             <Image source={item.image} style={styles.categoryImage} />
