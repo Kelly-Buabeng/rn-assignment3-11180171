@@ -1,40 +1,40 @@
-import { Image, StyleSheet, Text, View, StatusBar, FlatList, ScrollView } from 'react-native';
-
-
-import {SearchFilter} from './components/search-filter';
+import React from 'react';
+import { SafeAreaView, Image, StyleSheet, Text, View, StatusBar, FlatList, ScrollView } from 'react-native';
+import { SearchFilter } from './components/search-filter';
+import { CategoriesOfTasks } from './components/categoriesioftasks';
 
 export default function App() {
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.headerContainer}>
-        <View>
-          <Text style={styles.title}>Hello, Devs</Text>
-          <Text> Tasks today</Text>
-        </View>
-        <View>
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView style={styles.container}>
+        <View style={styles.headerContainer}>
+          <View>
+            <Text style={styles.title}>Hello, Devs</Text>
+            <Text>Tasks today</Text>
+          </View>
+          <View>
             <Image 
               source={require('./assets/images/user.png')}
-              style={{  width: 50, height: 50 }}  
-              />
-        </View>
-      </View> 
-      
-      <SearchFilter />
-      
-    </ScrollView>
-
-    
+              style={{ width: 50, height: 50 }}  
+            />
+          </View>
+        </View> 
+        
+        <SearchFilter />
+        <CategoriesOfTasks />
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
+    flex: 1,
     backgroundColor: '#F9ECEE',
-    height: '100%',
-    maxHeight: `calc(100%-${StatusBar.currentHeight})`,
-    display: 'flex',
-    flexDirection: 'column',
-    marginTop: StatusBar.currentHeight,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#F9ECEE',
     padding: 20,
   },
   title: {
@@ -42,12 +42,10 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   headerContainer: {
-    display: 'flex',
     flexDirection: 'row',
     width: '100%',
     justifyContent: 'space-between',
     alignItems: 'center',
-    gap: 1,
-    marginBottom: 30
+    marginBottom: 30,
   },
 });
